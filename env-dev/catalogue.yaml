@@ -1,0 +1,9 @@
+env:
+  MONGO: true
+  MONGO_URL: "mongodb://mongodb-dev.tejadevopsb81.icu:27017/catalogue"
+
+appName: catalogue
+service:
+  containerPort: 8080
+  type: LoadBalancer
+  servicePort: 8080

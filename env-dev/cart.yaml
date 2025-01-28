@@ -1,0 +1,10 @@
+env:
+  CATALOGUE_HOST: catalogue
+  CATALOGUE_PORT: "8080"
+  REDIS_HOST: redis-dev.tejadevopsb81.icu
+
+appName: cart
+service:
+  containerPort: 8080
+  type: ClusterIP
+  servicePort: 8080
