@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   name: {{ .Values.appName }}
   labels:
-    app: {{ .Values.appName }}
+   {{- include "common.labels" . | indent 4 }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Values.appName }}
+      {{- include "common.labels" . | indent 6 }}
   template:
     metadata:
       labels:
-        app: {{ .Values.appName }}
+        {{- include "common.labels" . | indent 8 }}
     spec:
       containers:
         - name: {{ .Values.appName }}
           image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.appName }}
           ports:
-            - containerPort: 80
+            - containerPort: {{ .Values.service.containerPort }}
           env:
           {{- range $k, $v := .Values.env }}
             - name: {{ $k }}
