@@ -5,7 +5,7 @@ env:
 appName: catalogue
 service:
   containerPort: 8080
-  type: LoadBalancer
+  type: ClusterIP
   servicePort: 8080
 
 schema:
