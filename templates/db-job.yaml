@@ -11,7 +11,6 @@ spec:
       containers:
         - name: {{ $.Values.appName }}-{{ . }}-load
           image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
-          imagePullPolicy: Always
           env:
             - name: SCHEMA_FILE
               value: db/{{ . }}.{{ $.Values.schema.dbExtension }}
