@@ -10,7 +10,8 @@ spec:
     spec:
       containers:
         - name: {{ $.Values.appName }}-{{ . }}-load
-          image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
+          image: 021891599381.dkr.ecr.us-east-1.amazonaws.com/roboshop-schema-load:latest
+          imagePullPolicy: Always
           env:
             - name: SCHEMA_FILE
               value: db/{{ . }}.{{ $.Values.schema.dbExtension }}
