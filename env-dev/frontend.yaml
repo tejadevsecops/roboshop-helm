@@ -15,3 +15,7 @@ service:
     containerPort: 80
     type: ClusterIP
     servicePort: 80
+
+ingress:
+    enabled: false
+    hostName: frontend-dev.tejadevopsb81.icu
