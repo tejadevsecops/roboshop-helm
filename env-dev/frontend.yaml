@@ -17,5 +17,5 @@ service:
     servicePort: 80
 
 ingress:
-    enabled: false
+    enabled: true
     hostName: frontend-dev.tejadevopsb81.icu
