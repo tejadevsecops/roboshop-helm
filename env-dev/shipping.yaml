@@ -11,12 +11,6 @@ service:
 schema:
   enabled: true
   dbExtension: sql
-  env:
-    DB_TYPE: mysql
-    APP_GIT_URL: https://github.com/roboshop-devops-project-v3/shipping
-    DB_HOST: mysql-dev.tejadevopsb81.icu
-    DB_USER: root
-    DB_PASS: RoboShop@1
   containers:
     - app-user
     - schema
