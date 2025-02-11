@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.appName }}
+  name: roboshop-{{ .Values.appName }}
   labels:
    {{- include "common.labels" . | indent 4 }}
 spec:
