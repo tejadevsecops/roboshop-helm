@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.appName }}
-          image: 021891599381.dkr.ecr.us-east-1.amazonaws.com/roboshop-{{ .Values.appName }}:{{ .Values.COMMIT_ID }}
+          image: 418272784676.dkr.ecr.us-east-1.amazonaws.com/roboshop-{{ .Values.appName }}:{{ .Values.COMMIT_ID }}
           ports:
             - containerPort: {{ .Values.service.containerPort }}
           envFrom:
