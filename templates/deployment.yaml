@@ -5,7 +5,7 @@ metadata:
   labels:
    {{- include "common.labels" . | indent 4 }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
       {{- include "common.labels" . | indent 6 }}
