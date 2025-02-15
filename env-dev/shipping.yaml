@@ -15,3 +15,7 @@ schema:
     - app-user
     - schema
     - master-data
+
+probes:
+  initialDelaySeconds: 60
+  periodSeconds: 5
