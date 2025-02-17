@@ -27,5 +27,5 @@ hpa:
 resources:
     requestsMemory: "200Mi"
     limitsMemory: "500Mi"
-    requestsCpu: "50m"
-    limitsCpu: "100m"
+    requestsCpu: "100m"
+    limitsCpu: "150m"
