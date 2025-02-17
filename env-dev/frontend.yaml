@@ -19,3 +19,7 @@ service:
 ingress:
     enabled: true
     hostName: frontend-dev.tejadevopsb81.icu
+
+hpa:
+    minReplicas: 2
+    maxReplicas: 10

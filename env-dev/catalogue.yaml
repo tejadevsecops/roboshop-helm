@@ -13,3 +13,7 @@ schema:
   dbExtension: js
   containers:
     - master-data
+
+hpa:
+  minReplicas: 2
+  maxReplicas: 10
