@@ -35,3 +35,10 @@ spec:
               port: app
             initialDelaySeconds: {{ .Values.probes.initialDelaySeconds }}
             periodSeconds: {{ .Values.probes.periodSeconds }}
+          resources:
+            requests:
+              memory: {{ .Values.resources.requestsMemory }}
+              cpu: {{ .Values.resources.requestsCpu }}
+            limits:
+              memory: {{ .Values.resources.limitsMemory }}
+              cpu: {{ .Values.resources.limitsCpu }}
