@@ -12,7 +12,7 @@
 
 appName: frontend
 service:
-    containerPort: 80
+    containerPort: 8080
     type: ClusterIP
     servicePort: 80
 
