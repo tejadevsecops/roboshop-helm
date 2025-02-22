@@ -12,6 +12,8 @@ spec:
         - name: {{ $.Values.appName }}-{{ . }}-load
           image: 418272784676.dkr.ecr.us-east-1.amazonaws.com/roboshop-schema-load:latest
           imagePullPolicy: Always
+          securityContext:
+            readOnlyRootFilesystem: true
           env:
             - name: SCHEMA_FILE
               value: db/{{ . }}.{{ $.Values.schema.dbExtension }}
