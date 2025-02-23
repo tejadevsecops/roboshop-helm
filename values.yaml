@@ -9,3 +9,6 @@ replicas: 2
 probes:
   initialDelaySeconds: 5
   periodSeconds: 5
+
+securityContext:
+  readOnlyRootFilesystem: true
