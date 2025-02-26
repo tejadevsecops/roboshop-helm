@@ -18,3 +18,6 @@ resources:
   limitsMemory: "500Mi"
   requestsCpu: "100m"
   limitsCpu: "150m"
+
+securityContext:
+  readOnlyRootFilesystem: false
