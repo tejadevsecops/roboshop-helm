@@ -19,16 +19,3 @@ service:
 ingress:
     enabled: true
     hostName: frontend-dev.tejadevopsb81.icu
-
-#hpa:
-#    minReplicas: 2
-#    maxReplicas: 10
-#
-#resources:
-#    requestsMemory: "200Mi"
-#    limitsMemory: "500Mi"
-#    requestsCpu: "100m"
-#    limitsCpu: "150m"
-#
-#securityContext:
-#    readOnlyRootFilesystem: false

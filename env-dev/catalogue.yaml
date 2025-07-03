@@ -17,13 +17,3 @@ schema:
     DB_HOST: mongodb-dev.tejadevopsb81.icu
   containers:
     - master-data
-
-#hpa:
-#  minReplicas: 2
-#  maxReplicas: 10
-#
-#resources:
-#  requestsMemory: "200Mi"
-#  limitsMemory: "500Mi"
-#  requestsCpu: "100m"
-#  limitsCpu: "150m"

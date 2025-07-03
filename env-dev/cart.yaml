@@ -8,16 +8,3 @@ service:
   containerPort: 8080
   type: ClusterIP
   servicePort: 8080
-
-#hpa:
-#  minReplicas: 2
-#  maxReplicas: 10
-#
-#resources:
-#  requestsMemory: "200Mi"
-#  limitsMemory: "500Mi"
-#  requestsCpu: "100m"
-#  limitsCpu: "150m"
-#
-#securityContext:
-#  readOnlyRootFilesystem: false

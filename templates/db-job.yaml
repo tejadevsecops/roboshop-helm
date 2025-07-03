@@ -1,32 +1,5 @@
-#{{ if .Values.schema.enabled }}
-#{{ range .Values.schema.containers }}
-#---
-#apiVersion: batch/v1
-#kind: Job
-#metadata:
-#  name: {{ $.Values.appName }}-{{ . }}-load
-#spec:
-#  template:
-#    spec:
-#      containers:
-#        - name: {{ $.Values.appName }}-{{ . }}-load
-#          image: 897782981255.dkr.ecr.us-east-1.amazonaws.com/roboshop-schema-load:latest
-#          imagePullPolicy: Always
-#          securityContext:
-#            readOnlyRootFilesystem: true
-#          env:
-#            - name: SCHEMA_FILE
-#              value: db/{{ . }}.{{ $.Values.schema.dbExtension }}
-#          envFrom:
-#            - secretRef:
-#                name: {{ $.Values.appName }}-job
-#      restartPolicy: Never
-#{{ end }}
-#{{ end }}
-
-
-  {{ if .Values.schema.enabled }}
-  {{ range .Values.schema.containers }}
+{{ if .Values.schema.enabled }}
+{{ range .Values.schema.containers }}
 ---
 apiVersion: batch/v1
 kind: Job
@@ -49,5 +22,5 @@ spec:
               value: {{ $val | quote }}
           {{- end }}
       restartPolicy: Never
-  {{ end }}
-  {{ end }}
+{{ end }}
+{{ end }}
