@@ -17,10 +17,9 @@ spec:
           env:
             - name: SCHEMA_FILE
               value: db/{{ . }}.{{ $.Values.schema.dbExtension }}
-          {{- range $key, $val := $.Values.schema.env }}
-            - name: {{ $key }}
-              value: {{ $val | quote }}
-          {{- end }}
+          envFrom:
+            - secretRef:
+                name: {{ $.Values.appName }}-job
       restartPolicy: Never
 {{ end }}
 {{ end }}

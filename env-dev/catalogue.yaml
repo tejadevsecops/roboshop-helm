@@ -1,6 +1,6 @@
-env:
-  MONGO: true
-  MONGO_URL: "mongodb://mongodb-dev.tejadevopsb81.icu:27017/catalogue"
+#env:
+#  MONGO: true
+#  MONGO_URL: "mongodb://mongodb-dev.tejadevopsb81.icu:27017/catalogue"
 
 appName: catalogue
 service:

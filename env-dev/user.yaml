@@ -1,7 +1,7 @@
-env:
-  MONGO: "true"
-  MONGO_URL: "mongodb://mongodb-dev.tejadevopsb81.icu:27017/users"
-  REDIS_URL: "redis://redis-dev.tejadevopsb81.icu:6379"
+#env:
+#  MONGO: "true"
+#  MONGO_URL: "mongodb://mongodb-dev.tejadevopsb81.icu:27017/users"
+#  REDIS_URL: "redis://redis-dev.tejadevopsb81.icu:6379"
 
 appName: user
 service:
