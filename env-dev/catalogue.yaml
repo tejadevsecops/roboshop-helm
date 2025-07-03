@@ -1,6 +1,6 @@
-#env:
-#  MONGO: true
-#  MONGO_URL: "mongodb://mongodb-dev.tejadevopsb81.icu:27017/catalogue"
+env:
+  MONGO: true
+  MONGO_URL: "mongodb://mongodb-dev.tejadevopsb81.icu:27017/catalogue"
 
 appName: catalogue
 service:
@@ -11,15 +11,19 @@ service:
 schema:
   enabled: true
   dbExtension: js
+  env:
+    DB_TYPE: mongo
+    APP_GIT_URL: github.com/tejadevsecops/roboshop-catalogue
+    DB_HOST: mongodb-dev.tejadevopsb81.icu
   containers:
     - master-data
 
-hpa:
-  minReplicas: 2
-  maxReplicas: 10
-
-resources:
-  requestsMemory: "200Mi"
-  limitsMemory: "500Mi"
-  requestsCpu: "100m"
-  limitsCpu: "150m"
+#hpa:
+#  minReplicas: 2
+#  maxReplicas: 10
+#
+#resources:
+#  requestsMemory: "200Mi"
+#  limitsMemory: "500Mi"
+#  requestsCpu: "100m"
+#  limitsCpu: "150m"
