@@ -11,9 +11,9 @@ service:
 schema:
   enabled: true
   dbExtension: js
-  env:
-    DB_TYPE: mongo
-    APP_GIT_URL: github.com/tejadevsecops/roboshop-catalogue
-    DB_HOST: mongodb-dev.tejadevopsb81.icu
+#  env:
+#    DB_TYPE: mongo
+#    APP_GIT_URL: github.com/tejadevsecops/roboshop-catalogue
+#    DB_HOST: mongodb-dev.tejadevopsb81.icu
   containers:
     - master-data
