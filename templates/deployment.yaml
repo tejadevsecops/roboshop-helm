@@ -53,7 +53,7 @@ metadata:
   labels:
    {{- include "common.labels" . | indent 4 }}
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: 1
   selector:
     matchLabels:
       {{- include "common.labels" . | indent 6 }}
